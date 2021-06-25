@@ -1,3 +1,5 @@
+console.log("Hello");
+
 function addTd(id, tr){
     let col = document.createElement('td');
     col.innerText = id;
@@ -7,8 +9,6 @@ function addTd(id, tr){
 function createBasicTable(){
     let table = document.createElement('table');
     table.setAttribute('id', 'studentsTable');
-    table.setAttribute('border', 'solid')
-    table.setAttribute('width', '200px');
     return table;
 }
 
@@ -22,6 +22,7 @@ function loadTable(){
     let table = createBasicTable();
     table.setAttribute('border', 'solid')
     table.setAttribute('width', '200px')
+    // table.setAttribute('class', 'table table-danger')
     let thead = document.createElement('thead');
     let theadTr = addTr(thead);
 
@@ -42,3 +43,17 @@ function loadTable(){
     document.getElementById("tablediv").append(table);
     
 }
+
+let setButtonClass = function() {
+    // TODO - change the style of the students table to table-danger
+    let table = document.getElementById('studentsTable');
+    table.setAttribute('class', 'table table-danger');
+}
+
+let attachEvents = function() {
+    // TODO Write code here to attach event listener to "Change table style" button
+    console.error("No node written here.")
+    document.getElementById('styleButton').addEventListener("click", () => console.log("Click"))
+}
+
+attachEvents();
